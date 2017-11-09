@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>KakaoAssign</title>
+	<style>
+
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="400" height="400">
+
+	</canvas>
+	<script>
+		var canvas;
+		var ctx;
+    var ctx2;
+		var x = 10;
+    var y = 10;
+		var delta = -1;
+    var change = 1;
+
+		window.onload = function() {
+			canvas = document.getElementById("canvas");
+			if (canvas == null || canvas.getContext == null) return;
+			ctx = canvas.getContext("2d");
+      ctx2 = canvas.getContext("2d");
+
+
+
+}
+
+for (var i = 0; i < 50; i++) {
+
+	first1 = setTimeout(first,0+15000*i);
+	second2 = setTimeout(second,4000+15000*i);
+	third3 = setTimeout(third,10000+15000*i);
+	forth4 = setTimeout(forth,12000+15000*i);
+
+}
+
+
+
+
+function first(){
+  var first = setInterval(draw, 25);
+
+    function draw() {
+			y=10; delta = 1;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillRect(x, y, 20, 20);
+      x+=delta;
+      if(x>=170){
+        clearInterval(first);
+
+      }
+      ctx2.strokeRect(50, 50, 100, 100);
+      ctx2.strokeStyle='red';
+    }
+}
+
+function second(){
+x=170;
+var second = setInterval(draw2, 37.5);
+    function draw2(){
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillRect(x, y, 20, 20);
+      y+=delta;
+      if(y>=170){
+        clearInterval(second);
+
+      }
+      ctx2.strokeRect(50, 50, 100, 100);
+      ctx2.strokeStyle='red';
+
+    }
+}
+
+function third(){
+    x=170;y=170;delta = -delta;
+    var third = setInterval(draw3, 12.5);
+    function draw3(){
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillRect(x, y, 20, 20);
+      x+=delta;
+      if(x<=10){
+        clearInterval(third);
+
+      }
+      ctx2.strokeRect(50, 50, 100, 100);
+      ctx2.strokeStyle='red';
+
+    }
+}
+
+function forth(){
+    x=10;y=170;
+    var forth = setInterval(draw4, 18.75);
+    function draw4(){
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillRect(x, y, 20, 20);
+      y+=delta;
+      if(y<=10){
+        clearInterval(forth);
+
+      }
+      ctx2.strokeRect(50, 50, 100, 100);
+      ctx2.strokeStyle='red';
+
+    }
+}
+
+	</script>
+</body>
+</html>
